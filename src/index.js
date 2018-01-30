@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 const defaultStyle = {
   demo: {
     textAlign: 'center',
-    marginTop: '50px',
+    marginTop: '50px'
   },
 };
 
