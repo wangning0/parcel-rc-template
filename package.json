@@ -59,7 +59,7 @@
   "license": "ISC",
   "lint-staged": {
     "src/**/*.js": [
-      "eslint --fix",
+      "npm run format",
       "git add"
     ]
   },
