@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 
-import './index.css';
+const defaultStyle = {
+  demo: {
+    textAlign: 'center',
+    marginTop: '50px',
+  },
+};
 
 class Demo extends Component {
-    render() {
-        return (
-            <div className="demo">
-                Hello, world!
-            </div>
-        )
-    }
+  render() {
+    return <div style={defaultStyle.demo}>Hello, world!</div>;
+  }
 }
 
 export default Demo;
