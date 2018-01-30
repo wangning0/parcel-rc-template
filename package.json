@@ -14,8 +14,7 @@
     "clean:umd": "rimraf dist",
     "clean:esm": "rimraf esm",
     "prestart": "npm run prebuild && cp ./.babelrc-template ./.babelrc && rimraf .cache",
-    "prebuild": "rimraf ./.babelrc",
-    "precommit": "npm run lint"
+    "prebuild": "rimraf ./.babelrc"
   },
   "dependencies": {
     "react": "^16.2.0",
@@ -45,6 +44,8 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^2.5.0",
     "eslint-plugin-react": "^7.6.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.1.0",
     "npm-run-all": "^4.1.2",
     "parcel-bundler": "^1.5.1",
     "prettier": "^1.10.2",
@@ -55,5 +56,16 @@
   "repository": "https://github.com/wangning0/parcel-rc-template",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "lint-staged": {
+    "src/**/*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
 }
