@@ -1,7 +1,7 @@
 const process_modules = process.env.BABEL_MODULES;
 const process_target = process.env.BABEL_TARGET;
 
-const modules = !process_modules || process_target === 'rollup'  ? false : process_modules;
+const modules = process_modules == null || process_target === 'rollup' || process_modules === 'esm'  ? false : process_modules;
 const target = process_target ? process_target : '';
 
 const options = {
