@@ -1,3 +1,3 @@
 # parcel react component tempalte
 
-> 待完善...
+> 实现思路 见 branch new-release
